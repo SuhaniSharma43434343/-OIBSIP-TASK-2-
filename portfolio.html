@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: #E1FFBB;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+        .header .left {
+            margin-top: 10px;
+            font-size: 25px;
+            flex: 0.3;
+            text-align: left;
+        }
+        .header .right {
+            margin-right: 20px;
+            margin-top: 10px;
+            font-size: 25px;
+            display: flex;
+            gap: 30px;
+        }
+        .header .right a {
+            color: #E1FFBB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .header .right a:hover {
+            color: #C6E7A8;
+        }
+        h1 {
+            font-size: 70px;
+            text-align: center;
+            margin-top: 300px; 
+        }
+        .section {
+            padding: 50px 0; 
+            text-align: center; 
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #222;
+            border: 1px solid #E1FFBB;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 50px; 
+        }
+        .about-text {
+            flex: 1;
+            padding: 20px;
+        }
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            font-size: 18px;
+        }
+        .about-img {
+            flex: 0 0 150px; 
+            padding: 20px;
+        }
+        .about-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+        .social-icons img {
+            width: 40px; 
+            height: auto; 
+            transition: transform 0.3s ease; 
+        }
+        .social-icons img:hover {
+            transform: scale(1.1); 
+        }
+        .section {
+    padding: 50px 0; 
+    text-align: center;
+}
+.projects-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+}
+.project {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+.project h3 {
+    font-size: 35px; 
+    margin-bottom: 20px;
+}
+.project a img {
+    width: 100%;
+    max-width: 450px; 
+    height: auto; 
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+.project a img:hover {
+    transform: scale(1.05); 
+}
+h2 {
+    font-size: 50px; 
+    margin-bottom: 20px;
+}
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around; 
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .skill-category {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+        .skill-category h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .skill-category ul {
+            list-style-type: disc; 
+            padding-left: 20px; 
+        }
+        .skill-category ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            border: 1px solid #E1FFBB;
+            border-radius: 10px;
+            width: 100%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 50px; 
+        }
+        .contact-container form {
+            width: 70%;
+            max-width: 400px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #E1FFBB;
+            border-radius: 10px;
+            background-color: #333;
+            color: #E1FFBB;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: none; 
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            background-color: #E1FFBB;
+            color: #222;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #C6E7A8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="left">
+                Suhani Sharma
+            </div>
+            <div class="right">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </header>
+    <h1>Frontend Developer | UI/UX Designer | Coder</h1>
+    <section class="section" id="about">
+        <div class="about-section">
+            <div class="about-img">
+                <img src="photo2.jpg" alt="Suhani Sharma">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi, I'm Suhani Sharma! I'm passionate about creating interactive and engaging web experiences. As a web developer and designer, I blend technical skills with creative flair to build websites that are both functional and visually appealing. I enjoy keeping up with the latest technological advancements and do well in team environments.</p>
+                <div class="social-icons">
+                    <a href="mailto:sharmasuhani4343@gmail.com" target="_blank">
+                        <img src="gmail.png" alt="Gmail">
+                    </a>
+                    <a href="https://www.linkedin.com/in/suhani-sharma-5b2393283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/SuhaniSharma43434343" target="_blank">
+                        <img src="git.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>UI/UX Design Skills</h3>
+                <ul>
+                    <li>Wireframe</li>
+                    <li>Prototyping</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Frontend Technologies</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Other Technical Skills</h3>
+                <ul>
+                    <li>C Language</li>
+                    <li>Data Structures and Algorithms (DSA)</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project web-page">
+                <h3>Web Page</h3>
+                <a href="https://suhanisharma43434343.github.io/OIBSIP/temperature.html">
+                    <img src="photo3.jpg" alt="Web Page Project">
+                </a>
+            </div>
+            <div class="project ui-design">
+                <h3>UI Design</h3>
+                <a href="ui-design-link.html">
+                    <img src="ui-design-image.jpg" alt="UI Design Project">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message!');
+        });
+    </script>
+</body>
+</html>
